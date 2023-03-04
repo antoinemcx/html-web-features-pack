@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>1. Slider Image</title>
+        <link rel="icon" href="img/favicon.png" class="flavicon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" media="screen and (max-width: 1280px)" href="css/mobile.css">
+
+        <!-- Importing fontawesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body>
+        <div class="slider">
+            <div class="slider_main">
+                <div class="previous"><i class="fas fa-chevron-left"></i></div>
+
+                <div class="slider_images">
+                    <img src="img/image1.jpg" class="slider-img active">
+                    <img src="img/image2.jpg" class="slider-img">
+                    <img src="img/image3.jpg" class="slider-img">
+                    <img src="img/image4.jpg" class="slider-img">
+                </div>
+
+                <div class="next"><i class="fas fa-chevron-right"></i></div>
+            </div>
+
+            <div class="slider_pagination_bubbles">
+                <span class="active"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </body>
+    
+    <script type="text/javascript" src="js/script.js"></script>
+</html>
