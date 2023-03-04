@@ -10,6 +10,7 @@ This slider is responsive, but beware : when the screen size decreases, the imag
 
 ### Non-native tools used
 - Fontawesome (for the previous & next buttons)
+
 ‎
    
 ###### Made with ❤️ by [antoinemcx](https://github.com/antoinemcx). If you like the project, feel free to put a ⭐.
