@@ -11,4 +11,4 @@ You need to click on the Branches button (image attached) and then select a proj
 ## What you need to know
 
 The code of the different features are not commented much, you have to **understand the code before using it**.
-Indeed, copying code without making it your own is completely useless ; thank you in advance for your understanding !
+Copying code without making it your own is completely useless ; thank you in advance for your understanding !
