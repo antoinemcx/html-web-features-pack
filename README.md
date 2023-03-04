@@ -3,7 +3,7 @@
 # 1. Image Slider
 
 ### Preview
-<img src="https://github.com/antoinemcx/html-web-features-pack/blob/1.-Image-Slider/preview.gif">
+<img src="https://github.com/antoinemcx/html-web-features-pack/blob/1.-Image-Slider/preview.jpg">
 
 ### Responsive
 This slider is responsive, but beware : when the screen size decreases, the image size adapts (**object-fit: cover**), so it's up to you if you prefer to do otherwise.
