@@ -8,40 +8,40 @@
 body { margin: 0px auto; padding: 0px; background-color: var(--background); }
 
 
-.slider { height: 75vh; position: relative; padding-top: 100px; }
-.slider_main {
+.carousel { height: 75vh; position: relative; padding-top: 100px; }
+.carousel_main {
     position: relative; height: 100%; width: 100%;
     justify-content: center; display: flex;
 }
 
-/* Images in the slider */
-.slider_images .slider-img {
+/* Images in the carousel */
+.carousel_images .carousel-img {
     object-fit: cover; position: absolute;
     height: 100%; width: 100%;
     top: 0; opacity: 0;
     transition: opacity .5s; border-radius: 10px;
 }
-.slider .slider-img.active { opacity: 1 }
-.slider_images, .slider-img { width: 75%!important; }
+.carousel .carousel-img.active { opacity: 1 }
+.carousel_images, .carousel-img { width: 75%!important; }
 
 /* Next & previous buttons */
-.slider i {
+.carousel i {
     font-size: 35px; cursor: pointer;
     top: 50%; transform: translateY(-26%);
     color: var(--main-color)
 }
-.slider .previous, .slider .next { align-self: center }
-.slider .previous:hover, .slider .next:hover { align-self: center; color: var(--main-color-hover) }
-.slider .previous { margin-right: 25px;  }
-.slider .next { margin-left: 25px; }
+.carousel .previous, .carousel .next { align-self: center }
+.carousel .previous:hover, .carousel .next:hover { align-self: center; color: var(--main-color-hover) }
+.carousel .previous { margin-right: 25px;  }
+.carousel .next { margin-left: 25px; }
 
 /* Pagination bubbles */
-.slider_pagination_bubbles {
+.carousel_pagination_bubbles {
     display: flex; gap: 1em;
     justify-content: center; padding-top: 25px;
 }
-.slider_pagination_bubbles span {
+.carousel_pagination_bubbles span {
     background: var(--bubbles-color); cursor: pointer;
     width: .8em; height: .8em; border-radius: 1rem; transition: 0.3s ease width
 }
-.slider_pagination_bubbles .active { background-color: var(--main-color); width: 2em; }
+.carousel_pagination_bubbles .active { background-color: var(--main-color); width: 2em; }

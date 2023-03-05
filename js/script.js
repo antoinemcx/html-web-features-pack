@@ -1,40 +1,40 @@
-const img_slider = document.getElementsByClassName('slider-img');
-let stage = 0; let img_amount = img_slider.length;
-const slider_previous = document.querySelector('.previous');
-const slider_next = document.querySelector('.next');
-const slider_pagination = document.querySelectorAll('.slider_pagination_bubbles span')
+const img_carousel = document.getElementsByClassName('carousel-img');
+let stage = 0; let img_amount = img_carousel.length;
+const carousel_previous = document.querySelector('.previous');
+const carousel_next = document.querySelector('.next');
+const carousel_pagination = document.querySelectorAll('.carousel_pagination_bubbles span')
 
-function removeSliderActiveImages() {
+function removeCarouselActiveImages() {
     for(let i=0; i<img_amount ; i++) {
-        img_slider[i].classList.remove('active');
-        slider_pagination.forEach(pag => pag.classList.remove('active'));
+        img_carousel[i].classList.remove('active');
+        carousel_pagination.forEach(pag => pag.classList.remove('active'));
     }
 }
 
-function showNextSliderImage() {
+function showNextCarouselImage() {
     stage++;
     if(stage >= img_amount) { stage = 0; }
 
-    removeSliderActiveImages();
-    img_slider[stage].classList.add('active');
-    slider_pagination[stage].classList.add('active');
+    removeCarouselActiveImages();
+    img_carousel[stage].classList.add('active');
+    carousel_pagination[stage].classList.add('active');
 }
-slider_next.addEventListener('click', function() { showNextSliderImage() });
+carousel_next.addEventListener('click', function() { showNextCarouselImage() });
 
-slider_previous.addEventListener('click', function() {
+carousel_previous.addEventListener('click', function() {
     stage--;
     if(stage < 0) { stage = img_amount - 1; }
 
-    removeSliderActiveImages();
-    img_slider[stage].classList.add('active');
-    slider_pagination[stage].classList.add('active');
+    removeCarouselActiveImages();
+    img_carousel[stage].classList.add('active');
+    carousel_pagination[stage].classList.add('active');
 });
 
-for(let i=0; i<slider_pagination.length ; i++) {
-    slider_pagination[i].addEventListener('click', () => {
-        showNextSliderImage();
+for(let i=0; i<carousel_pagination.length ; i++) {
+    carousel_pagination[i].addEventListener('click', () => {
+        showNextCarouselImage();
     })
 }
 
-// This loop will enable auto-scrolling on the slider
-setInterval(function() { showNextSliderImage(); }, 4000)
+// This loop will enable auto-scrolling on the carousel
+setInterval(function() { showNextCarouselImage(); }, 4000)
