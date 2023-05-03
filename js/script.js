@@ -1,40 +1,40 @@
-const img_carousel = document.getElementsByClassName('carousel-img');
-let stage = 0; let img_amount = img_carousel.length;
-const carousel_previous = document.querySelector('.previous');
-const carousel_next = document.querySelector('.next');
-const carousel_pagination = document.querySelectorAll('.carousel_pagination_bubbles span')
+// ##### Alternative without jQuery #####
+    // const backToTop = document.getElementById('back2Top');
 
-function removeCarouselActiveImages() {
-    for(let i=0; i<img_amount ; i++) {
-        img_carousel[i].classList.remove('active');
-        carousel_pagination.forEach(pag => pag.classList.remove('active'));
+    // function fadeIn(elem) { elem.style.display = "block" }
+    // function fadeOut(elem) { elem.style.display = "none" }
+
+    // window.onscroll = async function() {
+    //     var height = window.pageYOffset;
+    //     if (height > 100) {
+    //         fadeIn(backToTop)
+    //     } else {
+    //         fadeOut(backToTop);
+    //     }
+    // };
+
+    // document.ready(function() {
+    //     backToTop.click(function(event) {
+    //         event.preventDefault();
+    //         document.querySelector("html, body").animate({ scrollTop: 0 }, "slow");
+    //         return false;
+    //     });
+    // });
+
+const backToTop = $('#back2Top');
+
+$(window).scroll(function() {
+    var height = $(window).scrollTop();
+    if (height > 100) {
+        backToTop.fadeIn();
+    } else {
+        backToTop.fadeOut();
     }
-}
-
-function showNextCarouselImage() {
-    stage++;
-    if(stage >= img_amount) { stage = 0; }
-
-    removeCarouselActiveImages();
-    img_carousel[stage].classList.add('active');
-    carousel_pagination[stage].classList.add('active');
-}
-carousel_next.addEventListener('click', function() { showNextCarouselImage() });
-
-carousel_previous.addEventListener('click', function() {
-    stage--;
-    if(stage < 0) { stage = img_amount - 1; }
-
-    removeCarouselActiveImages();
-    img_carousel[stage].classList.add('active');
-    carousel_pagination[stage].classList.add('active');
 });
-
-for(let i=0; i<carousel_pagination.length ; i++) {
-    carousel_pagination[i].addEventListener('click', () => {
-        showNextCarouselImage();
-    })
-}
-
-// This loop will enable auto-scrolling on the carousel
-setInterval(function() { showNextCarouselImage(); }, 4000)
+$(document).ready(function() {
+    backToTop.click(function(event) {
+        event.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+    });
+});

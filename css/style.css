@@ -1,47 +1,17 @@
-:root {
-    --background: #29292A;
-    --text: #F1F1F1;
-    --main-color: rgb(211, 67, 67);
-    --main-color-hover: rgb(224, 83, 83);
-    --bubbles-color: #353536;
-}
-body { margin: 0px auto; padding: 0px; background-color: var(--background); }
+body { margin: 0px auto; padding: 0px; }
 
+#back2Top {
+    width: 30px; height: 30px; line-height: 30px;
+    overflow: hidden; z-index: 1005;
+    display: none; cursor: pointer; position: fixed;
+    bottom: 50px; right: 30px;
+    border-radius: 50%; text-align: center;
+    background-color: #cccccc; color: #ffffff;
+    font-size: 25px; text-decoration: none;
+}
+#back2Top i { vertical-align: text-top; font-size: 15px; margin-top: 7px }
 
-.carousel { height: 75vh; position: relative; padding-top: 100px; }
-.carousel_main {
-    position: relative; height: 100%; width: 100%;
-    justify-content: center; display: flex;
+.container {
+    max-width: 80%; padding-left: 15px; padding-right: 15px;
+    margin-left: auto; margin-right: auto;
 }
-
-/* Images in the carousel */
-.carousel_images .carousel-img {
-    object-fit: cover; position: absolute;
-    height: 100%; width: 100%;
-    top: 0; opacity: 0;
-    transition: opacity .5s; border-radius: 10px;
-}
-.carousel .carousel-img.active { opacity: 1 }
-.carousel_images, .carousel-img { width: 75%!important; }
-
-/* Next & previous buttons */
-.carousel i {
-    font-size: 35px; cursor: pointer;
-    top: 50%; transform: translateY(-26%);
-    color: var(--main-color)
-}
-.carousel .previous, .carousel .next { align-self: center }
-.carousel .previous:hover, .carousel .next:hover { align-self: center; color: var(--main-color-hover) }
-.carousel .previous { margin-right: 25px;  }
-.carousel .next { margin-left: 25px; }
-
-/* Pagination bubbles */
-.carousel_pagination_bubbles {
-    display: flex; gap: 1em;
-    justify-content: center; padding-top: 25px;
-}
-.carousel_pagination_bubbles span {
-    background: var(--bubbles-color); cursor: pointer;
-    width: .8em; height: .8em; border-radius: 1rem; transition: 0.3s ease width
-}
-.carousel_pagination_bubbles .active { background-color: var(--main-color); width: 2em; }
