@@ -4,7 +4,7 @@ A pack of some Web Features (HTML, CSS, JS) that I made and wanted to make open-
 If you like the project, feel free to put a ⭐ ; If you need help or anything, join my [discord server](https://discord.gg/G6WQsMQShZ).  
 
 
-## How to find the bots I'm looking for ?
+## How to find the features I'm looking for ?
 
 You need to click on the Branches button (image attached) and then select a project [![Branches](https://i.imgur.com/TPu0KUX.png)](https://github.com/antoinemcx/html-web-features-pack/branches)
 
