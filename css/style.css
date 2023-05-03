@@ -1,47 +1,15 @@
-:root {
-    --background: #29292A;
-    --text: #F1F1F1;
-    --main-color: rgb(211, 67, 67);
-    --main-color-hover: rgb(224, 83, 83);
-    --bubbles-color: #353536;
-}
-body { margin: 0px auto; padding: 0px; background-color: var(--background); }
+body { margin: 0px auto; padding: 0px; }
 
+/* For the demo */
+.container {
+    max-width: 80%; padding-left: 15px; padding-right: 15px;
+    margin-left: auto; margin-right: auto;
+}
+p { padding-bottom: 50px; }
 
-.carousel { height: 75vh; position: relative; padding-top: 100px; }
-.carousel_main {
-    position: relative; height: 100%; width: 100%;
-    justify-content: center; display: flex;
-}
+[class*="reveal"] { opacity: 0; transform: translateY(30px); }
+.reveal-visible { opacity: 1; transform: translateY(0); transition: 1s cubic-bezier(.5, 0, 0, 1); }
 
-/* Images in the carousel */
-.carousel_images .carousel-img {
-    object-fit: cover; position: absolute;
-    height: 100%; width: 100%;
-    top: 0; opacity: 0;
-    transition: opacity .5s; border-radius: 10px;
-}
-.carousel .carousel-img.active { opacity: 1 }
-.carousel_images, .carousel-img { width: 75%!important; }
-
-/* Next & previous buttons */
-.carousel i {
-    font-size: 35px; cursor: pointer;
-    top: 50%; transform: translateY(-26%);
-    color: var(--main-color)
-}
-.carousel .previous, .carousel .next { align-self: center }
-.carousel .previous:hover, .carousel .next:hover { align-self: center; color: var(--main-color-hover) }
-.carousel .previous { margin-right: 25px;  }
-.carousel .next { margin-left: 25px; }
-
-/* Pagination bubbles */
-.carousel_pagination_bubbles {
-    display: flex; gap: 1em;
-    justify-content: center; padding-top: 25px;
-}
-.carousel_pagination_bubbles span {
-    background: var(--bubbles-color); cursor: pointer;
-    width: .8em; height: .8em; border-radius: 1rem; transition: 0.3s ease width
-}
-.carousel_pagination_bubbles .active { background-color: var(--main-color); width: 2em; }
+.reveal-2 { transition-delay: .1s; }
+.reveal-3 { transition-delay: .2s; }
+/* Put the transition-delay you want and add as many classes as you want */
